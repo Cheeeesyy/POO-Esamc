@@ -1,0 +1,152 @@
+using System;
+
+/*public class Animal
+{
+    public string Nome;
+
+    public virtual void EmitirSom()
+    {
+        Console.WriteLine("Som generico do animal");
+    }
+}
+
+public class Cachorro : Animal
+{
+    public override void EmitirSom()
+    {
+        Console.WriteLine("Au Au");
+    }
+}
+
+
+public class Program
+{
+    public static void Main()
+    {
+        Animal a = new Animal();
+        a.Nome = "Animal";
+        a.EmitirSom();
+
+        Cachorro c = new Cachorro();
+        c.Nome = "Rex";
+        c.EmitirSom();
+    }
+}
+
+
+
+
+
+
+
+public class Item
+{
+    public string Nome;
+    public decimal Preco;
+}
+
+public class Pedido
+{
+    public Item ItemDoPedido;
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Item i = new Item { Nome = "Notebook", Preco = 3500 };
+        Pedido p = new Pedido { ItemDoPedido = i };
+
+        Console.WriteLine($"Pedido: {p.ItemDoPedido.Nome}, R$ {p.ItemDoPedido.Preco}");
+    }
+}
+
+
+
+
+
+
+
+
+
+public interface IVeiculo
+{
+    void Mover();
+}
+
+public class Carro : IVeiculo
+{
+    public void Mover()
+    {
+        Console.WriteLine("O carro esta se movendo");
+    }
+}
+
+public class Bicicleta : IVeiculo
+{
+    public void Mover()
+    {
+        Console.WriteLine("A bicicleta esta se movendo");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        IVeiculo carro = new Carro();
+        IVeiculo bicicleta = new Bicicleta();
+
+        carro.Mover();
+        bicicleta.Mover();
+    }
+}
+
+*/
+
+
+
+
+
+
+
+public interface IVoar
+{
+    void Voar();
+}
+
+public interface INadar
+{
+    void Nadar();
+}
+
+public class Pato : IVoar, INadar
+{
+    public void Voar() { Console.WriteLine("O pato esta voando"); }
+    public void Nadar() { Console.WriteLine("O pato esta nadando"); }
+}
+
+public class Aguia : IVoar
+{
+    public void Voar() { Console.WriteLine("A aguia esta voando"); }
+}
+
+public class Peixe : INadar
+{
+    public void Nadar() { Console.WriteLine("O peixe esta nadando"); }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Pato pato = new Pato();
+        Aguia aguia = new Aguia();
+        Peixe peixe = new Peixe();
+
+        pato.Voar();
+        pato.Nadar();
+        aguia.Voar();
+        peixe.Nadar();
+    }
+}

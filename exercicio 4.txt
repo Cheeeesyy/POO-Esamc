@@ -1,0 +1,84 @@
+using System;
+/*
+public class Pagamento
+{
+    public virtual void ProcessarPagamento()
+    {
+        Console.WriteLine("Processando pagamento");
+    }
+}
+
+public class CartaoCredito : Pagamento
+{
+    public override void ProcessarPagamento()
+    {
+        Console.WriteLine("Pagamento com Cartão de Crédito");
+    }
+}
+
+public class BoletoBancario : Pagamento
+{
+    public override void ProcessarPagamento()
+    {
+        Console.WriteLine("Pagamento com Boleto Bancário");
+    }
+}
+
+public class Pix : Pagamento
+{
+    public override void ProcessarPagamento()
+    {
+        Console.WriteLine("Pagamento com Pix");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        CartaoCredito c = new CartaoCredito();
+        BoletoBancario b = new BoletoBancario();
+        Pix p = new Pix();
+
+        c.ProcessarPagamento();
+        b.ProcessarPagamento();
+        p.ProcessarPagamento();
+    }
+}
+
+*/
+
+abstract class Funcionario
+{
+    public string Nome;
+    public abstract float CalcularSalario();
+}
+
+class Gerente : Funcionario
+{
+    public override float CalcularSalario()
+    {
+        return 10000;
+    }
+}
+
+class Programador : Funcionario
+{
+    public override float CalcularSalario()
+    {
+        return 5000;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Funcionario g = new Gerente { Nome = "Carlos" };
+        Funcionario p = new Programador { Nome = "Ana" };
+
+        Console.WriteLine(g.Nome + " recebe R$ " + g.CalcularSalario());
+        Console.WriteLine(p.Nome + " recebe R$ " + p.CalcularSalario());
+    }
+}
+

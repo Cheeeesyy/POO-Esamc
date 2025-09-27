@@ -1,0 +1,99 @@
+using System;
+
+/*public class Pessoa
+{
+    public string Nome;
+    public int Idade;
+    public string Cargo;
+
+    public void Apresentar()
+    {
+        Console.WriteLine($"Ola, meu nome e {Nome}, tenho {Idade} anos e sou {Cargo}.");
+    }
+
+    public double ObterSalario()
+    {
+        if (Cargo == "Gerente") return 10000.0;
+        else if (Cargo == "Desenvolvedor") return 5000.0;
+        else if (Cargo == "Estagiário") return 100.0;
+        else return 0.0;
+    }
+
+    public void  mostrarSalario()
+    {
+        Console.WriteLine($"{Cargo}: R$ {ObterSalario():N2}");
+    }
+}
+
+public class mostrando
+{
+    public static void Main()
+    {
+        Pessoa p1 = new Pessoa();
+        p1.Nome = "Gabriel";
+        p1.Idade = 40;
+        p1.Cargo = "Gerente";
+
+        Pessoa p2 = new Pessoa();
+        p2.Nome = "Pedro";
+        p2.Idade = 28;
+        p2.Cargo = "Desenvolvedor";
+
+        Pessoa p3 = new Pessoa();
+        p3.Nome = "Andressa";
+        p3.Idade = 20;
+        p3.Cargo = "Estagiário";
+
+        p1.Apresentar();
+        p1.mostrarSalario();
+
+        p2.Apresentar();
+        p2.mostrarSalario();
+
+        p3.Apresentar();
+        p3.mostrarSalario();
+    }
+}
+*/
+
+
+public class Fantasma
+{
+   
+    public string Habilidade;
+    public string Nick;
+    public string Cor;
+
+    public void GerarFantasma()
+    {
+        Console.WriteLine($"Fantasma criado! Nick: {Nick}, Cor: {Cor}, Habilidade: {Habilidade}");
+    }
+
+
+    public void Mover(string direcao)
+    {
+        Console.WriteLine($"{Nick} se moveu para {direcao}");
+    }
+}
+
+public class jogando
+{
+    public static void Main()
+    {
+        Fantasma f1 = new Fantasma();
+        f1.Nick = "Gasparzinho";
+        f1.Cor = "Vermelho";
+        f1.Habilidade = "Velocidade";
+
+        Fantasma f2 = new Fantasma();
+        f2.Nick = "Senhora sem capeca";
+        f2.Cor = "Rosa";
+        f2.Habilidade = "Invisibilidade";
+
+        f1.GerarFantasma();
+        f1.Mover("esquerda");
+
+        f2.GerarFantasma();
+        f2.Mover("direita");
+    }
+}
