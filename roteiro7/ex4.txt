@@ -1,0 +1,31 @@
+﻿class Program
+{
+    static void Main()
+    {
+        Queue<string> Clientes = new Queue<string>();
+        bool verif = true;
+        while (verif)
+        {
+            Console.WriteLine("Digite uma opção:\n1 - Adicionar\n2 - Atender\n3 - Tamanho\n4 - Sair");
+            int opcao = int.Parse(Console.ReadLine());
+            switch (opcao)
+            {
+                case 1:
+                    Console.Write("Digite o nome do cliente: ");
+                    string nome = Console.ReadLine();
+                    Clientes.Enqueue(nome);
+                    break;
+                case 2:
+                    Console.WriteLine(Clientes.Peek());
+                    Clientes.Dequeue();
+                    break;
+                case 3:
+                    Console.WriteLine($"Tamanho da fila: {Clientes.Count()}");
+                    break;
+                case 4:
+                    verif = false;
+                    break;
+            }
+        }
+    }
+}

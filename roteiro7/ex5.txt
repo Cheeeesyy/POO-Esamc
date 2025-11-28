@@ -1,0 +1,21 @@
+﻿class Program
+{
+    static void Main()
+    {
+        Stack<char> Letras = new Stack<char>();
+        char novaLetra;
+        Console.Write("Digite uma palavra: ");
+        string palavra = Console.ReadLine();
+        foreach(char c in palavra)
+        {
+            Letras.Push(c);
+        }
+        Console.Write($"Palavra original: {palavra}\n");
+        Console.Write("Palavra invertida: ");
+        while (Letras.Count > 0)
+        {
+            char novaPalavra = Letras.Pop();
+            Console.Write($"{novaPalavra}");
+        }
+    }
+}
